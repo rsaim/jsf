@@ -1,0 +1,478 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>
+        Cancellation & Refund policy
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600&amp;display=swap" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web&amp;display=swap" rel="stylesheet" />
+    <style>
+        .error {
+            border: 2px solid #b20002;
+        }
+
+        label.error2,
+        label.error3 {
+            border: 2px solid #b20002;
+        }
+
+        body,
+        html {
+            font-family: 'Rubik', sans-serif;
+        }
+
+        .top-mail-id {
+            color: #000;
+            font-size: 16px;
+        }
+
+        .top-mail-id .mail-btn {
+            font-size: 20px;
+        }
+
+        .fb-btn {
+            background: #429fff;
+            padding: 0px;
+            width: 38px;
+            height: 38px;
+            line-height: 38px;
+            margin-left: 5px;
+            color: #fff;
+            vertical-align: middle;
+            font-size: 20px;
+            text-align: center;
+            border-radius: 4px;
+        }
+
+        .tw-btn {
+            background: #00c4ff;
+            padding: 0px;
+            width: 38px;
+            height: 38px;
+            line-height: 38px;
+            margin-left: 5px;
+            color: #fff;
+            vertical-align: middle;
+            font-size: 20px;
+            text-align: center;
+            border-radius: 4px;
+        }
+
+        .yt-btn {
+            background: #b20002;
+            padding: 0px;
+            width: 38px;
+            height: 38px;
+            line-height: 38px;
+            margin-left: 5px;
+            color: #fff;
+            vertical-align: middle;
+            font-size: 20px;
+            text-align: center;
+            border-radius: 4px;
+        }
+
+        .navbar.navbar-default {
+            background-color: #fcc91b;
+            margin: 0px;
+        }
+
+        .navbar-default .navbar-nav>li>a {
+            color: #000;
+            font-weight: 500
+        }
+
+        .footer {
+            background: #3e3d3d;
+            padding: 20px 0 20px;
+        }
+
+        .footer p {
+            text-align: center;
+            color: #fff;
+        }
+
+        .donation-section {
+            background-size: cover;
+            background-repeat: no-repeat;
+            padding: 40px 0px;
+        }
+
+        .donation-title {
+            margin: 0px 0px 40px;
+            color: #fff;
+            position: relative;
+            display: inline-block;
+        }
+
+        .donation-title:after {
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            left: 0px;
+            width: 100px;
+            height: 4px;
+            background-color: #b20002;
+        }
+
+        .txt-prg {
+            text-align: justify;
+            font-size: 18px;
+            height: 500px;
+            color: #fff;
+            padding: 50px 20px;
+            letter-spacing: .2px;
+            line-height: 2;
+            vertical-align: middle;
+            display: table-cell;
+        }
+
+        .custom_donation {
+            width: 80px;
+            height: 20px;
+        }
+
+        .form-box {
+            background: url('images/form-bg-img.jpg') no-repeat;
+            background-size: cover;
+            padding: 30px 10px 20px;
+            border-radius: 8px;
+        }
+
+        .dontion_amt label {
+            box-shadow: 0px 2px 3px #aaa;
+            padding: 5px 15px;
+            margin-right: 5px;
+            background-color: #fff;
+            width: 90px;
+            min-height: 50px;
+            vertical-align: text-top;
+            line-height: 50px;
+        }
+
+        .dontion_amt label:last-child {
+            margin-right: 0px;
+            width: calc(100% - 400px);
+            line-height: 1.8;
+        }
+
+        .pointer {
+            cursor: pointer;
+            border: 2px solid #fff;
+        }
+
+        .pointer:hover,
+        .pointer_active {
+            background-color: #b20002 !important;
+            color: #fff;
+        }
+
+        .pointer:hover .custom_donation,
+        .pointer_active .custom_donation {
+            color: #000;
+        }
+
+        .pointer_active input {
+            background-color: #fff !important;
+            color: #000;
+        }
+
+        .p-0 {
+            padding: 0px;
+        }
+
+        .back_to_home_btn {
+            color: #000;
+        }
+
+        .mt-20 {
+            margin-top: 20px;
+        }
+
+        .g-btn {
+            background-color: #fcc91b;
+            padding: 8px 15px;
+            margin: 5px 0;
+            display: inline-block;
+            font-size: 18px;
+            font-weight: 500;
+            color: #000;
+        }
+
+        .donate_for_btn {
+            position: relative;
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 5px;
+        }
+
+        .main_selectio_box {
+            background-color: #fff;
+            padding: 6px;
+            min-width: 240px;
+            border: 2px solid #aaa;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .category_selection_list {
+            position: absolute;
+            top: 50px;
+            left: 0;
+            z-index: 999;
+            background: #fff;
+            border: 2px solid #b20002;
+            border-radius: 4px;
+            min-width: 240px;
+            display: none;
+        }
+
+        .selection_list {
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+
+        .selection_list:after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: -9px;
+            right: 10px;
+            width: 15px;
+            height: 15px;
+            background: #FFFFFF;
+            border-right: 2px solid #b20002;
+            border-top: 2px solid #b20002;
+            -moz-transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg);
+        }
+
+        .selection_list li {
+            list-style-type: none;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .selection_list li span {
+            color: #000;
+            cursor: pointer;
+        }
+
+        .rdio {
+            transform: scale(0);
+            width: 0px;
+            height: 0px;
+        }
+
+        @media(min-width:768px) {
+            .top-scl-pd {
+                padding-top: 22px;
+            }
+
+            .pl-0-md {
+                padding: 0px 5px 0px 2px;
+            }
+
+            .pl-0-md-l {
+                padding: 0px 30px 0px 2px;
+            }
+
+            .pl-0-md-1 {
+                padding: 0px 5px 0px 15px;
+            }
+
+            .pl-0-md-l-2 {
+                padding: 0px 18px 0px 2px;
+            }
+
+            .box-sssh {
+                border: 2px solid #ffffff;
+                border-radius: 8px;
+                box-shadow: 0px 0px 15px #555;
+            }
+
+            .footer_links {
+                padding: 0px;
+                margin: 0px;
+                text-align: left;
+            }
+
+            .footer_links li {
+                display: inline-block;
+                padding-left: 20px;
+                list-style-type: none;
+            }
+
+            .footer_links li a {
+                color: #fff;
+            }
+
+            .footer_copy {
+                text-align: right !important;
+                margin: 0px;
+            }
+        }
+
+        @media(max-width:767px) {
+            .img-center-xs img {
+                margin: 0 auto 15px;
+            }
+
+            .footer_links {
+                padding: 0px 0px 10px;
+                margin: 0px 0px 10px;
+                border-bottom: 1px solid #aaa;
+            }
+
+            .footer_links li {
+                padding-left: 15px;
+                list-style-type: none;
+                margin-top: 15px;
+            }
+
+            .footer_links li a {
+                color: #fff;
+            }
+
+            .footer_copy {
+                text-align: center;
+                margin: 0px;
+            }
+
+            .dontion_amt label:last-child {
+                width: calc(100% - 200px);
+            }
+
+            .donation-title {
+                margin: 10px 0;
+            }
+
+            .donate_for_btn {
+                margin-left: 0px;
+                margin-bottom: 10px;
+            }
+
+            .txt-prg {
+                font-size: 16px;
+                margin: 10px 0px;
+                color: #fff;
+                padding: 20px;
+                height: auto;
+            }
+
+            .form-group {
+                margin-bottom: 0px;
+            }
+
+            .form-control {
+                margin-bottom: 15px;
+            }
+        }
+
+        .head_content {
+            font-size: 18px;
+            font-weight: bold;
+            color: #000;
+            text-align: center;
+            font-family: 'Titillium Web', sans-serif;
+            display: block;
+            padding-top: 25px;
+        }
+
+        .head_content ul {
+            padding: 0;
+            list-style: none;
+        }
+
+        .head_content ul li {
+            display: inline-block;
+            position: relative;
+            padding-left: 15px;
+        }
+
+        .head_content ul li:after {
+            content: "";
+            position: absolute;
+            background: #000;
+            width: 4px;
+            height: 4px;
+            top: 12px;
+            left: 3px;
+            border-radius: 50%;
+        }
+
+        .head_content ul li:first-child:after {
+            content: "";
+            display: none;
+        }
+    </style>
+
+    <style>
+        .p-size p {
+            font-size: 16px;
+        }
+
+        .list_text li {
+            line-height: 1.7;
+            margin-bottom: 15px;
+            font-size: 16px;
+            text-align: justify;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container" style="min-height:calc(100vh - 200px);">
+        <div class="row">
+            <div class="col-sm-12">
+                <h1>Here are some FAQs for cancellation and refund policy with Sakshi</h1>
+                <div class="p-size">
+                    <p>Our privacy policy reflects complete commitment to keep user information strictly confidential.
+                        The site may, however, use this information from time to time for purposes such as corresponding
+                        with the users for various issues. We shall duly seek permission of the users in such cases.</p>
+
+                    <ul class="list_text">
+                        <li>
+                            <b>How to cancel donation that have been made?</b>
+                            <br />
+                            User can cancel the donation made within 30 days from the date of payment. If you decide to
+                            cancel a donation after 30 days, we will refund the donation provided the donation has not
+                            been used for a charitable project.
+                        </li>
+                        <li>
+                            <b>Donation slip Delivery </b>
+                            <br />
+                            Sakshi send a receipt for your donation via email/post according to your preferences.
+                        </li>
+                        <li>
+                            <b>Contact Information for donation services</b>
+                            <br />
+                            For any services related to donation, please email <a
+                                href="mailto:connect@sakshingo.org">connect@sakshingo.org</a> or contact us at
+                            011-24621743 during office hours.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
