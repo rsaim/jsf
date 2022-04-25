@@ -84,7 +84,6 @@ hr {
 h1, h2, h3, h4, h5, h6 {
     margin-top: 0;
     margin-bottom: 0.5rem;
-    text-shadow: 2px 2px #2033dd;
 }
 
 p {
@@ -10430,9 +10429,10 @@ h1, h2, h3, h4, h5,
 
 .slider-text h1 {
     font-size: 60px;
-    color: #fff;
+    color: #055561;
     line-height: 1.2;
     font-weight: 400;
+    mix-blend-mode: difference;
 }
 
 @media (max-width: 991.98px) {
