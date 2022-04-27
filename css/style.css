@@ -11809,6 +11809,7 @@ textarea.form-control {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+    background-position: top;
 }
 
 @media (max-width: 767.98px) {
