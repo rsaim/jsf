@@ -9,4 +9,4 @@ print(f"Downloading images from {url} to {dir}")
 
 Popen(f"wget -p -A .jpg,.jpeg,.png -H -nd {url}", shell=True).wait()
 Popen(f"python3 ~/github/jsf/remove_similar_images.py .", shell=True).wait()
-Popen(f"python3 ~/github/jsf/rename_files.py .", shell=True).wait()
+Popen(f"python3 ~/github/jsf/rename_images_serially.py .", shell=True).wait()
