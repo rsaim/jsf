@@ -1,4 +1,4 @@
-from jinja2 import Template, StrictUndefined
+from jinja2 import Template, StrictUndefined, BaseLoader, Environment, FileSystemLoader
 import os
 
 TEMPLATE_FILE = "work_templ.html"
@@ -128,14 +128,14 @@ work_data = (
     },
 )
 
-
-# Open the template
 with open(TEMPLATE_FILE, 'r') as template_file:
     template = Template(template_file.read())
 
-# Assign the finished string to 'output'
-output = template.render(work_data=work_data,
-                         undefined=StrictUndefined)
+THIS_DIR = os.path.dirname(os.path.abspath(__file__))
+print(f"{THIS_DIR=}")
+
+j2_env = Environment(loader=FileSystemLoader("."))
+output = j2_env.get_template("work_templ.html").render(work_data=work_data)
 
 with open(OUT_FILE, 'w') as outfile:
     outfile.write(output)
