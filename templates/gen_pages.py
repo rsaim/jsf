@@ -144,10 +144,10 @@ TEMPL_TO_PAGE = [
     "index",
     "about",
     "work",
-    # "donate",
-    # "blog",
-    # "gallery",
-    # "contact"
+    "donate",
+    "blog",
+    "gallery",
+    "contact"
 ]
 
 for pagename in TEMPL_TO_PAGE:
