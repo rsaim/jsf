@@ -24,11 +24,18 @@ TEMPLATE_MAPPING = [
     ("about.html",           "about.html",              ""),
     ("work.html",            "work.html",               "work.json"),
     ("donate.html",          "donate.html",             ""),
-    ("blog.html",            "blog.html",               ""),
+    # ("blog.html",            "blog.html",               ""),
     ("gallery.html",         "gallery.html",            ""),
     ("contact.html",         "contact.html",            ""),
     # Events
-    ("relief_templ.html",    "covid_lockdown.html",     "covid_lockdown.json")
+    ("relief_templ.html",    "covid_lockdown.html",     "covid_lockdown.json"),
+    ("relief_templ.html",    "fire_relief.html",        "fire_relief.json"),
+    ("relief_templ.html",    "flood_relief.html",        "flood_relief.json"),
+    ("relief_templ.html",    "rehab_relief.html",        "rehab_relief.json"),
+    ("relief_templ.html",    "medical_relief.html",        "medical_relief.json"),
+    ("relief_templ.html",    "rescue_relief.html",        "rescue_relief.json"),
+    ("relief_templ.html",    "demolition_relief.html",        "demolition_relief.json"),
+    ("relief_templ.html",    "events.html",        "events.json"),
 ]
 
 DATADIR = "../data"
