@@ -1,9 +1,6 @@
 from jinja2 import Template, StrictUndefined, BaseLoader, Environment, FileSystemLoader
 import os
 
-TEMPLATE_FILE = "work_templ.html"
-print(os.path.exists(TEMPLATE_FILE), os.getcwd(), os.path.realpath("."))
-OUT_FILE = "../work.html"
 
 work_data = (
     {
@@ -128,14 +125,54 @@ work_data = (
     },
 )
 
-with open(TEMPLATE_FILE, 'r') as template_file:
-    template = Template(template_file.read())
 
-THIS_DIR = os.path.dirname(os.path.abspath(__file__))
-print(f"{THIS_DIR=}")
+"""
+See nav.html
+    <li class="nav-item {{ 'active' if context.index   else '' }}"><a href="index.html" class="nav-link">Home</a></li>
+    <li class="nav-item {{ 'active' if context.about   else '' }}"><a href="about.html" class="nav-link">About</a></li>
+    <li class="nav-item {{ 'active' if context.work    else '' }}"><a href="work.html" class="nav-link">Our Work</a></li>
+    <li class="nav-item {{ 'active' if context.donate  else '' }}"><a href="donate.html" class="nav-link">Donate</a></li>
+    <li class="nav-item {{ 'active' if context.blog    else '' }}"><a href="blog.html" class="nav-link">Blog</a></li>
+    <li class="nav-item {{ 'active' if context.gallery else '' }}"><a href="gallery.html" class="nav-link">Gallery</a></li>
+    <li class="nav-item {{ 'active' if context.contact else '' }}"><a href="contact.html" class="nav-link">Contact</a></li>
+"""
+context = {
+    "index": False,
+    "about": False,
+    "work.html": False,
+    "donate": False,
+    "blog": False,
+    "gallery": False,
+    "contact": False
+}
+J2_ENV = Environment(loader=FileSystemLoader([".", "./components"]))
 
-j2_env = Environment(loader=FileSystemLoader("."))
-output = j2_env.get_template("work_templ.html").render(work_data=work_data)
 
-with open(OUT_FILE, 'w') as outfile:
-    outfile.write(output)
+def generate_page(templ_file, out_file):
+    redndered_Data = J2_ENV.get_template(templ_file).render(
+        work_data=work_data,
+        title="Jeevanstambh Foundation",
+        context=context
+    )
+
+    with open(out_file, 'w') as outfile:
+        outfile.write(redndered_Data)
+    outfile_path = os.path.abspath(out_file)
+    print(f"Rendered to {outfile_path}")
+
+# A Jinja template with the name + ".html" should exist in the CWD.
+# The template will be rendered as a HTML file in the parent dir
+TEMPL_TO_PAGE = [
+    "index",
+    # "about",
+    "work",
+    # "donate",
+    # "blog",
+    # "gallery",
+    # "contact"
+]
+
+for pagename in TEMPL_TO_PAGE:
+    context[pagename] = True
+    generate_page(f"{pagename}.html", 
+                  f"../{pagename}.html")
