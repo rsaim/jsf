@@ -10947,17 +10947,6 @@ h1, h2, h3, h4, h5,
     .gallery {
         width: 100%;
     }
-
-    .gallery.img {
-        display: block;
-        height: 300px;
-        width: 300px;
-        margin: 10px;
-    }
-
-    .ftco-gallery {
-        /* display: flex; */
-    }
 }
 
 
@@ -10967,6 +10956,12 @@ h1, h2, h3, h4, h5,
     margin: 10px;
     min-width: 300px;
     min-height: 300px;
+}
+
+@media (max-width: 767.98px) {
+    .gallery {
+        width: 100%;
+    }
 }
 
 
