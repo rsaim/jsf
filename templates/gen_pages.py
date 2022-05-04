@@ -125,38 +125,16 @@ work_data = (
     },
 )
 
-
-"""
-See nav.html
-    <li class="nav-item {{ 'active' if context.index   else '' }}"><a href="index.html" class="nav-link">Home</a></li>
-    <li class="nav-item {{ 'active' if context.about   else '' }}"><a href="about.html" class="nav-link">About</a></li>
-    <li class="nav-item {{ 'active' if context.work    else '' }}"><a href="work.html" class="nav-link">Our Work</a></li>
-    <li class="nav-item {{ 'active' if context.donate  else '' }}"><a href="donate.html" class="nav-link">Donate</a></li>
-    <li class="nav-item {{ 'active' if context.blog    else '' }}"><a href="blog.html" class="nav-link">Blog</a></li>
-    <li class="nav-item {{ 'active' if context.gallery else '' }}"><a href="gallery.html" class="nav-link">Gallery</a></li>
-    <li class="nav-item {{ 'active' if context.contact else '' }}"><a href="contact.html" class="nav-link">Contact</a></li>
-"""
-context = {
-    "index": False,
-    "about": False,
-    "work.html": False,
-    "donate": False,
-    "blog": False,
-    "gallery": False,
-    "contact": False
-}
 J2_ENV = Environment(loader=FileSystemLoader([".", "./components"]))
 
-
-def generate_page(templ_file, out_file):
-    redndered_Data = J2_ENV.get_template(templ_file).render(
+def generate_page(templ_file, out_file, context):
+    redndered_data = J2_ENV.get_template(templ_file).render(
         work_data=work_data,
         title="Jeevanstambh Foundation",
         context=context
     )
-
     with open(out_file, 'w') as outfile:
-        outfile.write(redndered_Data)
+        outfile.write(redndered_data)
     outfile_path = os.path.abspath(out_file)
     print(f"Rendered to {outfile_path}")
 
@@ -173,6 +151,16 @@ TEMPL_TO_PAGE = [
 ]
 
 for pagename in TEMPL_TO_PAGE:
+    context = {
+        "index": False,
+        "about": False,
+        "work": False,
+        "donate": False,
+        "blog": False,
+        "gallery": False,
+        "contact": False
+    }
     context[pagename] = True
-    generate_page(f"{pagename}.html", 
-                  f"../{pagename}.html")
+    generate_page(templ_file=f"{pagename}.html",
+                  out_file=f"../{pagename}.html",
+                  context=context)
