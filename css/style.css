@@ -4784,6 +4784,8 @@ input[type="button"].btn-block {
 .navbar-dark .navbar-nav .nav-link.show,
 .navbar-dark .navbar-nav .nav-link.active {
     color: #fff;
+    background: #51514c;
+    border-radius: 8px;
 }
 
 .navbar-dark .navbar-toggler {
@@ -10945,12 +10947,28 @@ h1, h2, h3, h4, h5,
     .gallery {
         width: 100%;
     }
+
+    .gallery.img {
+        display: block;
+        height: 300px;
+        width: 300px;
+        margin: 10px;
+    }
+
+    .ftco-gallery {
+        /* display: flex; */
+    }
 }
+
 
 .gallery.img {
     display: block;
-    height: 300px;
+    /* height: 300px; */
+    margin: 10px;
+    min-width: 300px;
+    min-height: 300px;
 }
+
 
 .gallery .icon {
     width: 50px;

@@ -19,7 +19,7 @@ def generate_page(templ_file, out_file, context, data, relief_area):
 # A Jinja template with the name + ".html" should exist in the CWD.
 # The template will be rendered as a HTML file in the parent dir
 TEMPLATE_MAPPING = [
-    # Template               Output FIle                Data filename
+    # Template               Output File                Data filename
     ("index.html",           "index.html",              ""),
     ("about.html",           "about.html",              ""),
     ("work.html",            "work.html",               "work.json"),
@@ -36,6 +36,7 @@ TEMPLATE_MAPPING = [
     ("relief_templ.html",    "rescue_relief.html",        "rescue_relief.json"),
     ("relief_templ.html",    "demolition_relief.html",        "demolition_relief.json"),
     ("relief_templ.html",    "events.html",        "events.json"),
+    ("partners_and_donors.html",    "partners_and_donors.html",        "partners_and_donors.json"),
 ]
 
 DATADIR = "../data"
