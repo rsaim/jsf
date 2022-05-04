@@ -142,7 +142,7 @@ def generate_page(templ_file, out_file, context):
 # The template will be rendered as a HTML file in the parent dir
 TEMPL_TO_PAGE = [
     "index",
-    # "about",
+    "about",
     "work",
     # "donate",
     # "blog",
