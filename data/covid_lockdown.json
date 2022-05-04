@@ -1,53 +1,57 @@
 [
     {
-        "title": "Migrant Travel",
-        "date": "June 27, 2018 at 2:22pm",
-        "image": "images/jsf/covid/002.jpg",
-        "paras": [
-            "We helped over 6000 migrants reach home during this period through buses, trains and flights. We facilitated travel to parts of Bihar, Jharkhand and Uttar Pradesh. We ensured that migrants received cooked meals, sanitary pads, packaged food, and other vital support throughout their journey.",
-
-            "We worked extensively with governments and other organizations to arrange trains for workers. We also arranged and sponsored travel tickets for migrants to return to their place of work."
-        ]
+        "relief_area": "COVID CRISIS/ LOCKDOWN MANAGEMENT"
     },
+    [
         {
-        "title": "Direct Benefit transfers",
-        "date": "June 27, 2018 at 2:22pm",
-        "image": "images/jsf/covid/007.png",
-        "paras": [
-            "We arranged over 12000 cooked meals for migrants travelling with us with the help of partner organizations like Janman, the 100 Rupee Project, and through tie-ups with dhabas along bus routes.",
-            "We distributed over 400 ration kits. Each kit cost up to Rs 700 and lasted up to 15 days."
-        ]
-    },
+            "title": "Migrant Travel",
+            "date": "June 27, 2018 at 2:22pm",
+            "image": "images/jsf/covid/002.jpg",
+            "paras": [
+                "We helped over 6000 migrants reach home during this period through buses, trains and flights. We facilitated travel to parts of Bihar, Jharkhand and Uttar Pradesh. We ensured that migrants received cooked meals, sanitary pads, packaged food, and other vital support throughout their journey.",
+                "We worked extensively with governments and other organizations to arrange trains for workers. We also arranged and sponsored travel tickets for migrants to return to their place of work."
+            ]
+        },
         {
-        "title": "Food",
-        "date": "June 27, 2018 at 2:22pm",
-        "image": "images/jsf/covid/003.jpg",
-        "paras": [
-            "We supported migrants who had lost their jobs or were in need of immediate financial aid with direct cash transfers (up to Rs 1500 per account). We also supported migrants with medical aid up to Rs 5000. We were able to support nearly 200 people through direct cash transfers."
-        ]
-    },
+            "title": "Direct Benefit transfers",
+            "date": "June 27, 2018 at 2:22pm",
+            "image": "images/jsf/covid/007.png",
+            "paras": [
+                "We arranged over 12000 cooked meals for migrants travelling with us with the help of partner organizations like Janman, the 100 Rupee Project, and through tie-ups with dhabas along bus routes.",
+                "We distributed over 400 ration kits. Each kit cost up to Rs 700 and lasted up to 15 days."
+            ]
+        },
         {
-        "title": "Livelihood Restoration",
-        "date": "June 27, 2018 at 2:22pm",
-        "image": "images/jsf/covid/004.jpg",
-        "paras": [
-            "We sponsored small businesses through the purchase of small equipment like sewing machines, electrical tools and other raw material. We also supported migrants with payment of rent. We provided support up to Rs 4000. We worked extensively with migrants, identified their skill sets, needs and requirements and helped them connect to employers."
-        ]
-    },
+            "title": "Food",
+            "date": "June 27, 2018 at 2:22pm",
+            "image": "images/jsf/covid/003.jpg",
+            "paras": [
+                "We supported migrants who had lost their jobs or were in need of immediate financial aid with direct cash transfers (up to Rs 1500 per account). We also supported migrants with medical aid up to Rs 5000. We were able to support nearly 200 people through direct cash transfers."
+            ]
+        },
         {
-        "title": "Financial Aid Towards Education",
-        "date": "June 27, 2018 at 2:22pm",
-        "image": "images/jsf/covid/008.png",
-        "paras": [
-            "We supported students struggling with online education through purchase, procurement and distribution of new and second-hand smartphones and other gadgets. This was possible through the support of partner organizations like Aaghaz Foundation. "
-        ]
-    },
+            "title": "Livelihood Restoration",
+            "date": "June 27, 2018 at 2:22pm",
+            "image": "images/jsf/covid/004.jpg",
+            "paras": [
+                "We sponsored small businesses through the purchase of small equipment like sewing machines, electrical tools and other raw material. We also supported migrants with payment of rent. We provided support up to Rs 4000. We worked extensively with migrants, identified their skill sets, needs and requirements and helped them connect to employers."
+            ]
+        },
         {
-        "title": "Support For Front Line workers",
-        "date": "June 27, 2018 at 2:22pm",
-        "image": "images/jsf/covid/006.jpg",
-        "paras": [
-            "We arranged protective gear like rubber boots for municipal workers in Baripada, Odisha. These were distributed by Aahwahan Foundation. Our efforts have been covered by many news outlets. All of our work has been made possible through the help of partner organizations, charity groups, NGOs, and the generous support of donors."
-        ]
-    }
+            "title": "Financial Aid Towards Education",
+            "date": "June 27, 2018 at 2:22pm",
+            "image": "images/jsf/covid/008.png",
+            "paras": [
+                "We supported students struggling with online education through purchase, procurement and distribution of new and second-hand smartphones and other gadgets. This was possible through the support of partner organizations like Aaghaz Foundation. "
+            ]
+        },
+        {
+            "title": "Support For Front Line workers",
+            "date": "June 27, 2018 at 2:22pm",
+            "image": "images/jsf/covid/006.jpg",
+            "paras": [
+                "We arranged protective gear like rubber boots for municipal workers in Baripada, Odisha. These were distributed by Aahwahan Foundation. Our efforts have been covered by many news outlets. All of our work has been made possible through the help of partner organizations, charity groups, NGOs, and the generous support of donors."
+            ]
+        }
+    ]
 ]

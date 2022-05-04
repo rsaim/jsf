@@ -4,11 +4,12 @@ import json
 
 J2_ENV = Environment(loader=FileSystemLoader([".", "./components"]))
 
-def generate_page(templ_file, out_file, context, data):
+def generate_page(templ_file, out_file, context, data, relief_area):
     redndered_data = J2_ENV.get_template(templ_file).render(
         data=data,
         title="Jeevanstambh Foundation",
-        context=context
+        context=context,
+        relief_area=relief_area
     )
     with open(out_file, 'w') as outfile:
         outfile.write(redndered_data)
@@ -17,39 +18,38 @@ def generate_page(templ_file, out_file, context, data):
 
 # A Jinja template with the name + ".html" should exist in the CWD.
 # The template will be rendered as a HTML file in the parent dir
-TEMPL_TO_PAGE = [
-    "index",
-    "about",
-    "work",
-    "donate",
-    "blog",
-    "gallery",
-    "contact",
+TEMPLATE_MAPPING = [
+    # Template               Output FIle                Data filename
+    ("index.html",           "index.html",              ""),
+    ("about.html",           "about.html",              ""),
+    ("work.html",            "work.html",               "work.json"),
+    ("donate.html",          "donate.html",             ""),
+    ("blog.html",            "blog.html",               ""),
+    ("gallery.html",         "gallery.html",            ""),
+    ("contact.html",         "contact.html",            ""),
     # Events
-    "covid_lockdown"
+    ("relief_templ.html",    "covid_lockdown.html",     "covid_lockdown.json")
 ]
 
 DATADIR = "../data"
 
-for pagename in TEMPL_TO_PAGE:
-    data_file = os.path.join(DATADIR, f"{pagename}.json")
+for templ_fname, outfile, datafname in TEMPLATE_MAPPING:
+    relief_area = ""
     data = {}
-    if os.path.exists(data_file):
-        with open(data_file, 'r') as f:
-            data = json.load(f)
-    else:
-        print(f"{data_file} doesn't exist", end=" ---> ")
-    context = {
-        "index": False,
-        "about": False,
-        "work": False,
-        "donate": False,
-        "blog": False,
-        "gallery": False,
-        "contact": False
-    }
-    context[pagename] = True
-    generate_page(templ_file=f"{pagename}.html",
-                  out_file=f"../{pagename}.html",
+    if datafname:
+        data_file = os.path.join(DATADIR, datafname)
+        if os.path.exists(data_file):
+            with open(data_file, 'r') as f:
+                data = json.load(f)
+            if isinstance(data, list) and len(data) == 2 and "relief_area" in data[0]:
+                relief_area = data[0]["relief_area"]
+                data = data[1]
+                # import ipdb; ipdb.set_trace()
+        else:
+            print(f"{data_file} doesn't exist", end=" ---> ")
+    context = {templ_fname : True}
+    generate_page(templ_file=f"{templ_fname}",
+                  out_file=f"../{outfile}",
                   context=context,
-                  data=data)
+                  data=data,
+                  relief_area=relief_area)
