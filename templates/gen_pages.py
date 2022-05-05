@@ -25,7 +25,7 @@ TEMPLATE_MAPPING = [
     ("work.html",            "work.html",               "work.json"),
     ("donate.html",          "donate.html",             ""),
     # ("blog.html",            "blog.html",               ""),
-    ("gallery.html",         "gallery.html",            ""),
+    ("gallery_tmpl.html",         "gallery.html",            "gallery.json"),
     ("contact.html",         "contact.html",            ""),
     # Events
     ("relief_templ.html",    "covid_relief.html",     "covid_relief.json"),
@@ -36,6 +36,7 @@ TEMPLATE_MAPPING = [
     ("relief_templ.html",    "rescue_relief.html",        "rescue_relief.json"),
     ("relief_templ.html",    "demolition_relief.html",        "demolition_relief.json"),
     ("relief_templ.html",    "events.html",        "events.json"),
+    
     ("partners_and_donors.html",    "partners_and_donors.html",        "partners_and_donors.json"),
 ]
 
