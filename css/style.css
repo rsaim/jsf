@@ -10818,8 +10818,9 @@ h1, h2, h3, h4, h5,
 
 .cause-entry {
     background: #fff;
-    background: rgb(149 76 76 / 95%);
+    /* background: rgb(149 76 76 / 95%); */
     background: black;
+    background: #d6cec3f8;
     border: 1px solid #fafafa;
     -webkit-box-shadow: 0px 3px 66px -24px rgba(0, 0, 0, 0.2);
     -moz-box-shadow: 0px 3px 66px -24px rgba(0, 0, 0, 0.2);
@@ -10829,6 +10830,9 @@ h1, h2, h3, h4, h5,
     -moz-border-radius: 4px;
     -ms-border-radius: 4px;
     border-radius: 4px;
+    font-weight: 300;
+    color: black;
+    background: #beb8aef8;
 }
 
 .cause-entry .img {
@@ -10843,10 +10847,13 @@ h1, h2, h3, h4, h5,
 @media (min-width: 768px) {
     .cause-entry .text {
         margin-top: -40px !important;
-        background: rgb(177, 109, 109);
-        background: rgb(149 76 76 / 95%);
+        /* background: rgb(177, 109, 109);
+        background: rgb(199 192 183); */
+
         width: 90%;
         margin: 0 auto;
+        color: black;
+        background: #beb8aef8;
     }
 }
 
