@@ -10433,7 +10433,20 @@ h1, h2, h3, h4, h5,
     content: '';
     opacity: 0;
     background: #000;
+    background: #6e707d73;
 }
+
+/* .ftco-section-3 .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    opacity: .9;
+    background: #f86f2d;
+    background: #6e707d73;
+} */
 
 .slider-text {
     color: #fff;
@@ -10660,15 +10673,18 @@ h1, h2, h3, h4, h5,
 }
 
 .btn.btn-secondary {
-    background: #fa8f3d;
-    border: 1px solid #fa8f3d;
+    background: #737475;
+    border: 1px solid #727374;
     color: #fff;
+    opacity: 0.9;
 }
 
 .btn.btn-secondary:hover {
-    border: 1px solid #fa8f3d;
-    background: transparent;
-    color: #fa8f3d;
+    border: 1px solid #3a24133b;
+    /* background: #737475b7; */
+    /* color: black; */
+    opacity: 1;
+    transform: scale(1.4);
 }
 
 .btn.btn-secondary.btn-outline-secondary {
