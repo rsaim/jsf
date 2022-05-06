@@ -38,6 +38,7 @@ TEMPLATE_MAPPING = [
     ("relief_templ.html",    "events.html",        "events.json"),
     
     ("partners_and_donors.html",    "partners_and_donors.html",        "partners_and_donors.json"),
+    ("work.html",    "press.html",        "press.json"),
 ]
 
 DATADIR = "../data"
@@ -56,7 +57,7 @@ for templ_fname, outfile, datafname in TEMPLATE_MAPPING:
                 # import ipdb; ipdb.set_trace()
         else:
             print(f"{data_file} doesn't exist", end=" ---> ")
-    context = {templ_fname : True}
+    context = {outfile : True}
     generate_page(templ_file=f"{templ_fname}",
                   out_file=f"../{outfile}",
                   context=context,
