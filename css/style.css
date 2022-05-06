@@ -33,6 +33,7 @@
     --breakpoint-xl: 1200px;
     --font-family-sans-serif: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --jsf-bg-color: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgb(3 2 23 / 92%) 70%, rgb(0 0 0) 100%);
 }
 
 *,
@@ -66,6 +67,7 @@ body {
     font-weight: 400;
     line-height: 1.5;
     color: #212529;
+    color: #c7e8e7;
     text-align: left;
     /* background-color: #fff; */
 }
@@ -6667,7 +6669,7 @@ button.bg-light:focus {
 .bg-dark {
     background-color: #5c97d1 !important;
     background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(101,159,132,0.9150253851540616) 70%, rgba(0,212,255,1) 100%);
+    background: var(--jsf-bg-color);
     opacity: 0.9;
 }
 
@@ -10440,7 +10442,7 @@ h1, h2, h3, h4, h5,
 
 .slider-text h1 {
     font-size: 60px;
-    color: #055561;
+    color: lightgray;
     line-height: 1.2;
     font-weight: 400;
     mix-blend-mode: difference;
@@ -10747,15 +10749,15 @@ h1, h2, h3, h4, h5,
 }
 
 .ftco-intro .block-18.color-1 {
-    background: #f86f2d;
+    background: #d6cec3d8;
 }
 
 .ftco-intro .block-18.color-2 {
-    background: #fa8f3d;
+    background: #d6cec3e8;
 }
 
 .ftco-intro .block-18.color-3 {
-    background: #faaa3a;
+    background: #d6cec3f8;
 }
 
 .ftco-intro .block-18 .text strong {
@@ -10857,6 +10859,7 @@ h1, h2, h3, h4, h5,
     content: '';
     opacity: .9;
     background: #f86f2d;
+    background: #6e707d73;
 }
 
 .ftco-section-3 .img {
@@ -11569,6 +11572,7 @@ textarea.form-control {
     background-color: #5c97d1 !important;
     background: rgb(2,0,36);
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(101,159,132,0.9150253851540616) 70%, rgba(0,212,255,1) 100%);
+    background: var(--jsf-bg-color);
     opacity: 0.9;
 
 }
@@ -12802,12 +12806,14 @@ textarea.form-control {
         stroke-dasharray: 89, 200;
         stroke-dashoffset: -136px;
     }
-}
+}   
 
 /* Stars */
 html {
     /* height: 100%; */
     background: radial-gradient(ellipse at bottom, #1b2735 0%, #68aba7ce 100%);
+    background: radial-gradient(ellipse at bottom, #1b2735 0%, #000000 100%);
+    background: radial-gradient(ellipse at bottom, #1b273530 0%, #000000db 100%)
     /* overflow: hidden; */
   }
   
