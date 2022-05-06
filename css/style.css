@@ -10775,15 +10775,15 @@ h1, h2, h3, h4, h5,
 }
 
 .ftco-intro .block-18.color-1 {
-    background: #d6cec3d8;
+    background: #75767756;
 }
 
 .ftco-intro .block-18.color-2 {
-    background: #d6cec3e8;
+    background: #75767756;
 }
 
 .ftco-intro .block-18.color-3 {
-    background: #d6cec3f8;
+    background: #75767756;
 }
 
 .ftco-intro .block-18 .text strong {
@@ -13105,4 +13105,10 @@ a.socialIcon:hover,
     background-color: #D3D3D3;
     opacity: 0.5;
     color: red;
+}
+.team-cards p {
+    color: black;
+}
+.team-cards h6 {
+    color: #f86f2d;
 }
