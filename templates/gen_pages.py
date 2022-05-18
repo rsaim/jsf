@@ -21,27 +21,27 @@ def generate_page(templ_file, out_file, context, data, relief_area):
 # A Jinja template with the name + ".html" should exist in the CWD.
 # The template will be rendered as a HTML file in the parent dir
 TEMPLATE_MAPPING = [
-    # Template               Output File                Data filename
-    ("index.html",           "index.html",              ""),
-    ("about.html",           "about.html",              ""),
-    ("work.html",            "work.html",               "work.json"),
-    ("donate.html",          "donate.html",             ""),
-    # ("blog.html",            "blog.html",               ""),
-    ("gallery_tmpl.html",         "gallery.html",            "gallery.json"),
-    ("contact.html",         "contact.html",            ""),
+    # Template               Output File                    Data filename
+    ("index.html",           "index.html",                  ""),
+    ("about.html",           "about.html",                  ""),
+    ("work.html",            "work.html",                   "work.json"),
+    ("donate.html",          "donate.html",                 ""),
+    # ("blog.html",          "blog.html",                   ""),
+    ("gallery_tmpl.html",    "gallery.html",                "gallery.json"),
+    ("contact.html",         "contact.html",                ""),
     # Events
-    ("relief_templ.html",    "covid_relief.html",     "covid_relief.json"),
-    ("relief_templ.html",    "fire_relief.html",        "fire_relief.json"),
-    ("relief_templ.html",    "flood_relief.html",        "flood_relief.json"),
-    ("relief_templ.html",    "rehab_relief.html",        "rehab_relief.json"),
-    ("relief_templ.html",    "medical_relief.html",        "medical_relief.json"),
-    ("relief_templ.html",    "rescue_relief.html",        "rescue_relief.json"),
-    ("relief_templ.html",    "demolition_relief.html",        "demolition_relief.json"),
-    ("relief_templ.html",    "events.html",        "events.json"),
-
-    ("partners_and_donors.html",    "partners_and_donors.html",
+    ("relief_templ.html",    "covid_relief.html",           "covid_relief.json"),
+    ("relief_templ.html",    "fire_relief.html",            "fire_relief.json"),
+    ("relief_templ.html",    "flood_relief.html",           "flood_relief.json"),
+    ("relief_templ.html",    "rehab_relief.html",           "rehab_relief.json"),
+    ("relief_templ.html",    "medical_relief.html",         "medical_relief.json"),
+    ("relief_templ.html",    "rescue_relief.html",          "rescue_relief.json"),
+    ("relief_templ.html",    "demolition_relief.html",      "demolition_relief.json"),
+    ("relief_templ.html",    "events.html",                 "events.json"),
+    ("partners_and_donors.html",
+     "partners_and_donors.html",
      "partners_and_donors.json"),
-    ("work.html",    "press.html",        "press.json"),
+    ("work.html",           "press.html",                   "press.json"),
 ]
 
 DATADIR = "../data"
@@ -57,7 +57,6 @@ for templ_fname, outfile, datafname in TEMPLATE_MAPPING:
             if isinstance(data, list) and len(data) == 2 and "relief_area" in data[0]:
                 relief_area = data[0]["relief_area"]
                 data = data[1]
-                # import ipdb; ipdb.set_trace()
         else:
             print(f"{data_file} doesn't exist", end=" ---> ")
     context = {outfile: True}
