@@ -4,6 +4,7 @@ import json
 
 J2_ENV = Environment(loader=FileSystemLoader([".", "./components"]))
 
+
 def generate_page(templ_file, out_file, context, data, relief_area):
     redndered_data = J2_ENV.get_template(templ_file).render(
         data=data,
@@ -15,6 +16,7 @@ def generate_page(templ_file, out_file, context, data, relief_area):
         outfile.write(redndered_data)
     outfile_path = os.path.abspath(out_file)
     print(f"Rendered to {outfile_path}")
+
 
 # A Jinja template with the name + ".html" should exist in the CWD.
 # The template will be rendered as a HTML file in the parent dir
@@ -36,8 +38,9 @@ TEMPLATE_MAPPING = [
     ("relief_templ.html",    "rescue_relief.html",        "rescue_relief.json"),
     ("relief_templ.html",    "demolition_relief.html",        "demolition_relief.json"),
     ("relief_templ.html",    "events.html",        "events.json"),
-    
-    ("partners_and_donors.html",    "partners_and_donors.html",        "partners_and_donors.json"),
+
+    ("partners_and_donors.html",    "partners_and_donors.html",
+     "partners_and_donors.json"),
     ("work.html",    "press.html",        "press.json"),
 ]
 
@@ -57,7 +60,7 @@ for templ_fname, outfile, datafname in TEMPLATE_MAPPING:
                 # import ipdb; ipdb.set_trace()
         else:
             print(f"{data_file} doesn't exist", end=" ---> ")
-    context = {outfile : True}
+    context = {outfile: True}
     generate_page(templ_file=f"{templ_fname}",
                   out_file=f"../{outfile}",
                   context=context,
