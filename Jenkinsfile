@@ -8,7 +8,7 @@ pipeline {
         }
         stage('FailureTest') {
             steps {
-                sh 'echo "Fail!"; exit 1'
+                sh 'echo "Pass!"; exit 0'
             }
         }
 
