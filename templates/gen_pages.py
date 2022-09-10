@@ -8,7 +8,7 @@ J2_ENV = Environment(loader=FileSystemLoader([".", "./components"]))
 def generate_page(templ_file, out_file, context, data, relief_area):
     redndered_data = J2_ENV.get_template(templ_file).render(
         data=data,
-        title="Jeevanstambh Foundation",
+        title="Jeevan Stambh Foundation",
         context=context,
         relief_area=relief_area
     )
